@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/views/career_section/career_main.dart';
+import 'package:levent_ozkan_personal_website/views/developer_section/developer_main.dart';
+import 'package:levent_ozkan_personal_website/views/education_section/education_main.dart';
 import 'package:levent_ozkan_personal_website/views/header_section/header.dart';
 import 'package:levent_ozkan_personal_website/views/personal_section/personal_main.dart';
 
@@ -25,7 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
               Header(),
           PersonalMain(),
-          Career()
+          Education(),
+          SizedBox(height: 20,),
+          Career(),
+          Developer()
         ],
       ),
     );

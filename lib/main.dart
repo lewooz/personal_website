@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:levent_ozkan_personal_website/utilities/colors.dart';
-import 'package:levent_ozkan_personal_website/views/splash_screen/splash_screen.dart';
+import 'package:levent_ozkan_personal_website/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: GoogleFonts.poppinsTextTheme()
       ),
-      home: SplashScreen(),
+      home: HomeScreen(),
     );
   }
 }
