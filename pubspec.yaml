@@ -19,8 +19,9 @@ dependencies:
   get: ^3.24.0
   lottie: ^0.7.0+1
   animate_do: ^1.7.5
-  websafe_svg: ^1.1.4
   flip_card: ^0.4.4
+  flutter_svg: ^0.19.2+1
+  flutter_vector_icons: ^0.2.1
 
 
 dev_dependencies:
