@@ -288,6 +288,52 @@ class Developer extends StatelessWidget {
                         ),
                       ]
                   ),
+                ),
+                SizedBox(height: 30,),
+                RichText(
+                  text: TextSpan(
+                      children: [
+                        TextSpan(
+                            text: """In the meantime I had the chance to try""",
+                            style: commonStyle
+                        ),
+                        TextSpan(
+                            text: """ Flutter Web """,
+                            style: boldStyle
+                        ),
+                        TextSpan(
+                            text: "extensively and developed a couple of projects with it.",
+                            style: commonStyle
+                        ),
+                      ]
+                  ),
+                ),
+                SizedBox(height: 30,),
+                RichText(
+                  text: TextSpan(
+                      children: [
+                        TextSpan(
+                            text: """Today I prefer using """,
+                            style: commonStyle
+                        ),
+                        TextSpan(
+                            text: """ Google Cloud Firestore """,
+                            style: boldStyle
+                        ),
+                        TextSpan(
+                            text: "as database and",
+                            style: commonStyle
+                        ),
+                        TextSpan(
+                            text: """ Algolia Search """,
+                            style: boldStyle
+                        ),
+                        TextSpan(
+                            text: "in my applications.",
+                            style: commonStyle
+                        ),
+                      ]
+                  ),
                 )
               ],
             ),
