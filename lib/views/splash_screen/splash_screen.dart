@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 manualTrigger: true,
                 duration: Duration(milliseconds: 1500),
                 controller: (controller) => lottieController = controller,
-                child: Lottie.asset("assets/lottie/splash_anim.json", width: 40.wb )),
+                child: Lottie.asset("assets/lottie/splash_anim.json", height: 50.hb,fit: BoxFit.contain )),
             SizedBox(
               height: 10,
             ),

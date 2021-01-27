@@ -4,16 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/personal_section/flipping_circle.dart';
 
+import '../widgets/responsive_widget.dart';
+
 class PersonalMain extends StatelessWidget {
   GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
   String frontImage, backImage;
 
   @override
   Widget build(BuildContext context) {
+    final bool isSmall = ResponsiveWidget.isSmallScreen(context);
     ScreenSize.recalculate(context);
     return Container(
-      padding: EdgeInsets.only(
-          left: 14.58.wb, right: 14.58.wb, top: 17.12.hb, bottom: 10.hb),
+      padding: EdgeInsets.symmetric(vertical: 200, horizontal: isSmall ? 20 : 200),
       child: Row(
         children: [
           Expanded(

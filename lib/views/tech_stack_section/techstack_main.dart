@@ -62,7 +62,7 @@ class TechStackMain extends StatelessWidget {
                     StackLogo("assets/svg/reactjs.svg", "ReactJS", logoSize: 75,),
                     StackLogo("assets/svg/firebase.svg", "Firebase", logoSize: 55,),
                     StackLogo("assets/svg/algolia.svg", "Algolia(Search API)", logoSize: 90,),
-                    StackLogo("assets/svg/angular.svg", "Angular"),
+                    StackLogo("assets/svg/onesignal.svg", "OneSignal(Notification API)", logoSize: 55,),
                     StackLogo("assets/svg/swift.svg", "Swift(IOS)"),
                     StackLogo("assets/svg/java.svg", "Java(Android)", logoSize: 60,),
                     StackLogo("assets/svg/kotlin.svg", "Kotlin(Android)")
