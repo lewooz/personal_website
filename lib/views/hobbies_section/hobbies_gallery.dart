@@ -103,7 +103,7 @@ class HobbieItem extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             colorFilter: ColorFilter.mode(Color(0x55595362), BlendMode.color),
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
             image: AssetImage(imagePath),
           ),
         ),

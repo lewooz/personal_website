@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -24,10 +25,11 @@ class FooterMain extends StatelessWidget {
                     () => launch('https://flutter.dev/'),
                 'Created with Flutter',
               ),
+            IconButton(icon: Icon(Entypo.linkedin,color: Colors.white,), onPressed: ()=>goUrl(context, "https://tr.linkedin.com/in/levent-%C3%B6zkan-31b5b487")),
               _buildItem(
                 textStyle,
                     () =>
-                        launch('https://github.com/louisdeveseleer/resume_web'),
+                        launch('https://github.com/lewooz/personal_website'),
                 'Source code',
               ),
             ],
@@ -35,6 +37,10 @@ class FooterMain extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  goUrl(BuildContext context, String url) async {
+    await launch(url);
   }
 
   Widget _buildItem(TextStyle textStyle, VoidCallback callback, String text) {

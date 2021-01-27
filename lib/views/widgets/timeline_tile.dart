@@ -107,12 +107,7 @@ class _MyTimelineTileState extends State<ExpandableTile>
                 width: isSmall ? 16 : 32,
               ),
               Expanded(
-                child: isSmall
-                    ? Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: _contentChildren(context, e),
-                )
-                    : Row(
+                child: Row(
                   children: _contentChildren(context, e),
                 ),
               ),
