@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:levent_ozkan_personal_website/utilities/colors.dart';
+import 'package:websafe_svg/websafe_svg.dart';
 
 class StackLogo extends StatelessWidget {
   String svgImage, text;
@@ -28,7 +29,7 @@ class StackLogo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Center(child: SvgPicture.asset(svgImage,width: logoSize,)),
+          Center(child: WebsafeSvg.asset(svgImage,width: logoSize,)),
           SizedBox(height: 10,),
 
           Text(

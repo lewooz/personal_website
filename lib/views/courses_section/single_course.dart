@@ -4,6 +4,8 @@ import 'package:levent_ozkan_personal_website/utilities/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:math' as math;
 
+import 'package:websafe_svg/websafe_svg.dart';
+
 class SingleCourse extends StatelessWidget {
   String courseYear, courseTitle, courseLink, techLogo;
   double logoAngle;
@@ -15,7 +17,7 @@ class SingleCourse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      padding: EdgeInsets.all(5),
       decoration: BoxDecoration(
           color: Colors.white,
         borderRadius: BorderRadius.circular(12),
@@ -35,28 +37,31 @@ class SingleCourse extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      courseYear,
-                      style: TextStyle(
-                          color: AppColors.GREY,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      courseTitle,
-                      style: TextStyle(
-                          color: AppColors.GREY,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600),
-                    )
-                  ],
+                Flexible(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        courseYear,
+                        style: TextStyle(
+                            color: AppColors.GREY,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        courseTitle,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            color: AppColors.GREY,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,),
+                      )
+                    ],
+                  ),
                 ),
                 IconButton(
                     icon: Icon(
@@ -75,7 +80,7 @@ class SingleCourse extends StatelessWidget {
               child: Transform.rotate(angle: logoAngle,
                 child: Opacity(
                     opacity: 0.4,
-                    child: SvgPicture.asset(
+                    child: WebsafeSvg.asset(
                       techLogo, width: 90,)),),
             ),
           ),

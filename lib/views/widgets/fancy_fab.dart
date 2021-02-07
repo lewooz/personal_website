@@ -8,6 +8,7 @@ import 'package:levent_ozkan_personal_website/viewmodels/home_vm.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/pulse_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_tooltip/simple_tooltip.dart';
+import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../utilities/colors.dart';
 import '../../utilities/colors.dart';
@@ -240,7 +241,7 @@ class _MiniFabCircleState extends State<MiniFabCircle> {
                     color: Colors.white,
                     size: 17,
                   ) :
-                  SvgPicture.asset(
+                  WebsafeSvg.asset(
                     "assets/svg/technology.svg",
                     width: 17,
                     height: 17,

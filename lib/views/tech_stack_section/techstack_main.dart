@@ -4,6 +4,7 @@ import 'package:levent_ozkan_personal_website/utilities/colors.dart';
 
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/tech_stack_section/stack_logo.dart';
+import 'package:websafe_svg/websafe_svg.dart';
 
 class TechStackMain extends StatelessWidget {
 
@@ -26,7 +27,7 @@ class TechStackMain extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset(
+                WebsafeSvg.asset(
                   "assets/svg/technology.svg",
                   width: 30,
                   height: 30,
