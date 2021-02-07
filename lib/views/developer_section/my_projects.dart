@@ -58,7 +58,7 @@ class MyProjects extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    'Pia-Mantı',
+                    'Pia Mantı',
                     style: titleStyle,
                     textAlign: TextAlign.end,
                   ),

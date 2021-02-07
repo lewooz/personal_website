@@ -1,8 +1,8 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/header_section/profile_pic.dart';
+import 'package:websafe_svg/websafe_svg.dart';
 
 import '../widgets/responsive_widget.dart';
 
@@ -42,12 +42,12 @@ class Header extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Expanded(
-                          child: SvgPicture.asset(
+                          child: WebsafeSvg.asset(
                               "assets/svg/flutter_logo.svg",),
                         ),
                         SizedBox(width: 20,),
                         Expanded(
-                          child: SvgPicture.asset(
+                          child: WebsafeSvg.asset(
                             "assets/svg/nextjs_logo.svg",),
                         )
                       ],
@@ -106,7 +106,7 @@ class Header extends StatelessWidget {
               Expanded(
                   flex: 1,
                   child: Center(
-                    child: SvgPicture.asset(
+                    child: WebsafeSvg.asset(
                         "assets/svg/flutter_logo.svg", width: 486),
                   )),
               Expanded(
@@ -143,9 +143,9 @@ class Header extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SvgPicture.asset("assets/svg/react_logo.svg", width: 185.51,),
+                      WebsafeSvg.asset("assets/svg/react_logo.svg", width: 185.51,),
                       SizedBox(height: 5,),
-                      SvgPicture.asset("assets/svg/nextjs_logo.svg", width: 334,)
+                      WebsafeSvg.asset("assets/svg/nextjs_logo.svg", width: 334,)
                     ],
                   ))
             ],
