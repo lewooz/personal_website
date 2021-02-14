@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
+import 'package:levent_ozkan_personal_website/views/widgets/responsive_widget.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/timeline_tile.dart';
 
 class Developer extends StatelessWidget {
@@ -17,10 +18,11 @@ class Developer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenSize.recalculate(context);
+    final bool isSmall = ResponsiveWidget.isSmallScreen(context);
     return Container(
       padding: EdgeInsets.symmetric(
           vertical: 50,
-          horizontal: 14.32.wb
+          horizontal: isSmall ? 10 : 14.32.wb
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -155,7 +157,7 @@ class Developer extends StatelessWidget {
                   text: TextSpan(
                       children: [
                         TextSpan(
-                            text: """I continued my mobile development learning journey with IOS development and started learning swift.""",
+                            text: """I continued my mobile development learning journey with""",
                             style: commonStyle
                         ),
                         TextSpan(
@@ -232,7 +234,7 @@ class Developer extends StatelessWidget {
                   text: TextSpan(
                       children: [
                         TextSpan(
-                            text: """While improving myself on Flutter, I developed an online product library project with Neo4J as database in Angular Framework at work""",
+                            text: """While improving myself on""",
                             style: commonStyle
                         ),
                         TextSpan(

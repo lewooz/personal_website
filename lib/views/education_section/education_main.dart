@@ -12,7 +12,6 @@ class Education extends StatelessWidget {
       color: Color(0xff0031B4),
       padding: EdgeInsets.symmetric(
           vertical: 50,
-          horizontal: 14.32.wb
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,7 +39,10 @@ class Education extends StatelessWidget {
           SizedBox(
             height: 70,
           ),
-          Flexible(
+          Container(
+            constraints: BoxConstraints(
+                maxWidth: 1300
+            ),
             child: ListView(
               shrinkWrap: true,
               children: [

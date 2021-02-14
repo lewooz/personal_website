@@ -4,6 +4,8 @@ import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/courses_section/single_course.dart';
 import 'dart:math' as math;
 
+import 'package:levent_ozkan_personal_website/views/widgets/responsive_widget.dart';
+
 class CoursesMain extends StatelessWidget {
 
   final TextStyle commonStyle = TextStyle(
@@ -19,10 +21,11 @@ class CoursesMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenSize.recalculate(context);
+    final bool isSmall = ResponsiveWidget.isSmallScreen(context);
     return Container(
       padding: EdgeInsets.symmetric(
           vertical: 50,
-          horizontal: 14.32.wb
+          horizontal: isSmall ? 15 : 14.32.wb
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

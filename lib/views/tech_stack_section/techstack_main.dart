@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:levent_ozkan_personal_website/utilities/colors.dart';
 
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/tech_stack_section/stack_logo.dart';
+import 'package:levent_ozkan_personal_website/views/widgets/responsive_widget.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class TechStackMain extends StatelessWidget {
@@ -11,10 +12,11 @@ class TechStackMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenSize.recalculate(context);
+    final bool isSmall = ResponsiveWidget.isSmallScreen(context);
     return Container(
       padding: EdgeInsets.symmetric(
           vertical: 50,
-          horizontal: 14.32.wb
+          horizontal: isSmall ? 15 : 14.32.wb
       ),
       child: Card(
         elevation: 10,
