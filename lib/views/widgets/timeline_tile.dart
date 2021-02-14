@@ -118,156 +118,159 @@ class _MyTimelineTileState extends State<ExpandableTile>
           .toList(),
     );
 
-    return AnimatedBuilder(
-      animation: _controller.view,
-      builder: (context, child) {
-        return Column(
-          children: [
-            IntrinsicHeight(
-              child: Row(
-                children: [
-                  !isSmall
-                      ? Container(
-                    width: 200,
-                    padding: EdgeInsets.only(right: 32),
-                    child: Text(
-                      widget.date,
-                      style:
-                      Theme.of(context).textTheme.bodyText1.copyWith(
-                        fontStyle: FontStyle.italic,
-                        color: Colors.white
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: AnimatedBuilder(
+        animation: _controller.view,
+        builder: (context, child) {
+          return Column(
+            children: [
+              IntrinsicHeight(
+                child: Row(
+                  children: [
+                    !isSmall
+                        ? Container(
+                      width: 200,
+                      padding: EdgeInsets.only(right: 32),
+                      child: Text(
+                        widget.date,
+                        style:
+                        Theme.of(context).textTheme.bodyText1.copyWith(
+                          fontStyle: FontStyle.italic,
+                          color: Colors.white
+                        ),
+                        textAlign: TextAlign.end,
                       ),
-                      textAlign: TextAlign.end,
+                    )
+                        : Container(),
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [
+                        Container(
+                          width: 2,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Container(
+                          width: 16,
+                          height: 16,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
-                  )
-                      : Container(),
-                  Stack(
-                    alignment: AlignmentDirectional.center,
-                    children: [
-                      Container(
-                        width: 2,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Container(
-                        width: 16,
-                        height: 16,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    width: isSmall ? 8 : 16,
-                  ),
-                  Expanded(
-                    child: Tooltip(
-                      message: 'Click to expand',
-                      waitDuration: Duration(milliseconds: 300),
-                      preferBelow: true,
-                      child: InkWell(
-                        onTap: _handleTap,
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          onEnter: (_) {
-                            setState(() {
-                              _isHovering = true;
-                            });
-                          },
-                          onExit: (_) {
-                            setState(() {
-                              _isHovering = false;
-                            });
-                          },
-                          child: AnimatedContainer(
-                            duration: Duration(milliseconds: 200),
-                            decoration: BoxDecoration(
-                              color: _isHovering
-                                  ? Colors.white12
-                                  : Colors.transparent,
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                            child: Row(
-                              children: [
-                                SizedBox(
-                                  width: isSmall ? 8 : 16,
-                                ),
-                                Expanded(
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 50.0, bottom: 30),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.start,
-                                      children: [
-                                        isSmall
-                                            ? Text(
-                                          widget.date,
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1
-                                              .copyWith(
-                                            fontStyle:
-                                            FontStyle.italic,
-                                              color: Colors.white
-                                          ),
-                                        )
-                                            : Container(),
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 8.0),
-                                          child: Text(
-                                            widget.title,
+                    SizedBox(
+                      width: isSmall ? 8 : 16,
+                    ),
+                    Expanded(
+                      child: Tooltip(
+                        message: 'Click to expand',
+                        waitDuration: Duration(milliseconds: 300),
+                        preferBelow: true,
+                        child: InkWell(
+                          onTap: _handleTap,
+                          child: MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            onEnter: (_) {
+                              setState(() {
+                                _isHovering = true;
+                              });
+                            },
+                            onExit: (_) {
+                              setState(() {
+                                _isHovering = false;
+                              });
+                            },
+                            child: AnimatedContainer(
+                              duration: Duration(milliseconds: 200),
+                              decoration: BoxDecoration(
+                                color: _isHovering
+                                    ? Colors.white12
+                                    : Colors.transparent,
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: isSmall ? 8 : 16,
+                                  ),
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 50.0, bottom: 30),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        children: [
+                                          isSmall
+                                              ? Text(
+                                            widget.date,
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline5.copyWith(color: Colors.white),
+                                                .bodyText1
+                                                .copyWith(
+                                              fontStyle:
+                                              FontStyle.italic,
+                                                color: Colors.white
+                                            ),
+                                          )
+                                              : Container(),
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 8.0),
+                                            child: Text(
+                                              widget.title,
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5.copyWith(color: Colors.white),
+                                            ),
                                           ),
-                                        ),
-                                        Text(
-                                          widget.subtitle,
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1.copyWith(color: Colors.white),
-                                        ),
-                                      ],
+                                          Text(
+                                            widget.subtitle,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodyText1.copyWith(color: Colors.white),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                                widget.extras.length>0 ?
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: RotationTransition(
-                                    turns: _iconTurns,
-                                    child: const Icon(
-                                      Icons.expand_more,
-                                      color: Colors.white,
+                                  widget.extras.length>0 ?
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: RotationTransition(
+                                      turns: _iconTurns,
+                                      child: const Icon(
+                                        Icons.expand_more,
+                                        color: Colors.white,
+                                      ),
                                     ),
-                                  ),
-                                ) : Container(),
-                              ],
+                                  ) : Container(),
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            ClipRect(
-              child: Align(
-                alignment: Alignment.centerLeft,
-                heightFactor: _heightFactor.value,
-                child: closed ? null : details,
+              ClipRect(
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  heightFactor: _heightFactor.value,
+                  child: closed ? null : details,
+                ),
               ),
-            ),
-          ],
-        );
-      },
+            ],
+          );
+        },
+      ),
     );
   }
 

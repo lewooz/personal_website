@@ -68,13 +68,13 @@ class _CarouselGalleryState extends State<CarouselGallery> {
       options: CarouselOptions(
         // enableInfiniteScroll: false,
         // scrollPhysics: NeverScrollableScrollPhysics(),
-        viewportFraction: min(0.75, 2 * height / width),
+        viewportFraction: 1,
         autoPlay: true,
         autoPlayAnimationDuration: Duration(seconds: 1),
         autoPlayInterval: Duration(seconds: 6),
         height: height,
         enlargeCenterPage: true,
-        // aspectRatio: 16 / 9,
+        aspectRatio: 16 / 9,
       ),
     );
   }
