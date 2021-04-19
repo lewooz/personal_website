@@ -1,9 +1,16 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/utilities/colors.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
+import 'package:levent_ozkan_personal_website/viewmodels/home_vm.dart';
 import 'package:levent_ozkan_personal_website/views/developer_section/portfolio_subsection.dart';
+import 'package:levent_ozkan_personal_website/views/widgets/reveal_anim.dart';
+import 'package:provider/provider.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 class MyProjects extends StatelessWidget {
+  AnimationController controller;
+
 
   TextStyle titleStyle = TextStyle(
     fontSize: 24,
@@ -34,86 +41,100 @@ class MyProjects extends StatelessWidget {
           ),
           SizedBox(height: 100,),
           //Color(0xff595e52)
-          PortfolioSubsection(
-              image: Image.asset("assets/png/website_screenshot.png"),
-              content: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'This website',
-                    style: titleStyle,
-                  ),
-                  Text(
-                    'A web application developed in Flutter.',
-                    style: commonStyle,
-                  ),
-                ],
-              )
+          RevealAnim(
+            key: Key("mywebsite"),
+            child: PortfolioSubsection(
+                image: Image.asset("assets/png/website_screenshot.png"),
+                content: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'This website',
+                      style: titleStyle,
+                    ),
+                    Text(
+                      'A web application developed in Flutter.',
+                      style: commonStyle,
+                    ),
+                  ],
+                )
+            ),
           ),
           SizedBox(height: 100,),
-          PortfolioSubsection(
-              image: Image.asset("assets/jpg/pia_manti.jpg"),
-              isLeftAligned: false,
-              content: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    'Pia Mantı',
-                    style: titleStyle,
-                    textAlign: TextAlign.end,
-                  ),
-                  Text(
-                    """The first application I developed using Android Native(Java). Has features like food-ordering, notifications etc.
+          RevealAnim(
+            key: Key("piamanti"),
+            revealDirection: RevealDirection.RIGHT,
+            child: PortfolioSubsection(
+                image: Image.asset("assets/jpg/pia_manti.jpg"),
+                isLeftAligned: false,
+                content: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Pia Mantı',
+                      style: titleStyle,
+                      textAlign: TextAlign.end,
+                    ),
+                    Text(
+                      """The first application I developed using Android Native(Java). Has features like food-ordering, notifications etc.
 Development Year: 2019
 Github: https://github.com/lewooz/PiaManti""",
-                    style: commonStyle,
-                    textAlign: TextAlign.end,
-                  ),
-                ],
-              )
+                      style: commonStyle,
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
+                )
+            ),
           ),
           SizedBox(height: 100,),
-          PortfolioSubsection(
-              image: Image.asset("assets/jpg/nti.jpg"),
-              content: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Nti Go',
-                    style: titleStyle,
-                  ),
-                  Text(
-                    """The second application I developed using Android Native(Java). The company that I was working in at that time was selling these environment monitoring products. I made this application for our customers for easy environment monitoring through mobile phones.
+          RevealAnim(
+            key: Key("nti"),
+            child: PortfolioSubsection(
+                image: Image.asset("assets/jpg/nti.jpg"),
+                content: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Nti Go',
+                      style: titleStyle,
+                    ),
+                    Text(
+                      """The second application I developed using Android Native(Java). The company that I was working in at that time was selling these environment monitoring products. I made this application for our customers for easy environment monitoring through mobile phones.
 Development Year: 2019
 Github android: https://github.com/lewooz/NtiGo
 Github swift: https://github.com/lewooz/NtiGoSwift
 """,
-                    style: commonStyle,
-                  ),
-                ],
-              )
+                      style: commonStyle,
+                    ),
+                  ],
+                )
+            ),
           ),
           SizedBox(height: 100,),
-          PortfolioSubsection(
-              image: Image.asset("assets/png/localy.png"),
-              isLeftAligned: false,
-              content: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    'Localy',
-                    style: titleStyle,
-                  ),
-                  Text(
-                    """An application made for local shops. A lot of features included like loyalty, ordering etc. 
+          RevealAnim(
+            key: Key("localy"),
+            revealDirection: RevealDirection.RIGHT,
+            child: PortfolioSubsection(
+                image: Image.asset("assets/png/localy.png"),
+                isLeftAligned: false,
+                content: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Localy',
+                      style: titleStyle,
+                    ),
+                    Text(
+                      """An application made for local shops. A lot of features included like loyalty, ordering etc. 
 Development Year: 2020
 Github: https://github.com/locallyoncloud/localy-flutter
-                    """,
-                    style: commonStyle,
-                    textAlign: TextAlign.end,
-                  ),
-                ],
-              )
+                      """,
+                      style: commonStyle,
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
+                )
+            ),
           ),
           SizedBox(height: 60,),
           Container(
