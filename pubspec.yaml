@@ -15,18 +15,21 @@ dependencies:
 
   cupertino_icons: ^1.0.0
   provider: ^4.3.2+2
-  google_fonts: ^1.1.0
+  google_fonts: ^2.0.0
   get: ^3.24.0
-  lottie: ^0.7.0+1
+  lottie: ^1.0.1
   animate_do: ^1.7.5
   flip_card: ^0.4.4
-  websafe_svg: ^1.1.4+2
+  websafe_svg: ^2.0.0
   flutter_vector_icons: ^0.3.0
   url_launcher: ^5.7.10
   carousel_slider: ^3.0.0
   simple_tooltip: ^0.1.16
   scrollable_positioned_list: ^0.1.9
   auto_size_text: ^2.1.0
+  visibility_detector: ^0.2.0
+  simple_animations: ^3.0.3
+  supercharged: ^2.0.0
 
 dev_dependencies:
   flutter_test:

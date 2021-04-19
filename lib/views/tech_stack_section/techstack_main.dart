@@ -58,17 +58,17 @@ class TechStackMain extends StatelessWidget {
                   spacing: 25,
                   runSpacing: 25,
                   children: [
-                    StackLogo("assets/svg/dart.svg", "Dart", ),
-                    StackLogo("assets/svg/flutter.svg", "Flutter", logoSize: 60,),
-                    StackLogo("assets/svg/javascript.svg", "Javascript"),
-                    StackLogo("assets/svg/typescript.svg", "Typescript"),
-                    StackLogo("assets/svg/reactjs.svg", "ReactJS", logoSize: 75,),
-                    StackLogo("assets/svg/firebase.svg", "Firebase", logoSize: 55,),
-                    StackLogo("assets/svg/algolia.svg", "Algolia(Search API)", logoSize: 90,),
-                    StackLogo("assets/svg/onesignal.svg", "OneSignal(Notification API)", logoSize: 55,),
-                    StackLogo("assets/svg/swift.svg", "Swift(IOS)"),
-                    StackLogo("assets/svg/java.svg", "Java(Android)", logoSize: 60,),
-                    StackLogo("assets/svg/kotlin.svg", "Kotlin(Android)")
+                    StackLogo("assets/svg/dart.svg", "Dart",0 ),
+                    StackLogo("assets/svg/flutter.svg", "Flutter",1, logoSize: 60),
+                    StackLogo("assets/svg/javascript.svg", "Javascript",2),
+                    StackLogo("assets/svg/typescript.svg", "Typescript",3),
+                    StackLogo("assets/svg/reactjs.svg", "ReactJS",4, logoSize: 75),
+                    StackLogo("assets/svg/firebase.svg", "Firebase",5, logoSize: 55),
+                    StackLogo("assets/svg/algolia.svg", "Algolia(Search API)",6, logoSize: 90,),
+                    StackLogo("assets/svg/onesignal.svg", "OneSignal(Notification API)",7, logoSize: 55,),
+                    StackLogo("assets/svg/swift.svg", "Swift(IOS)",8),
+                    StackLogo("assets/svg/java.svg", "Java(Android)",9, logoSize: 60,),
+                    StackLogo("assets/svg/kotlin.svg", "Kotlin(Android)",10)
                   ]
                 ),
               ),

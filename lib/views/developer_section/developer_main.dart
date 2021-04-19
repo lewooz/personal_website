@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/responsive_widget.dart';
+import 'package:levent_ozkan_personal_website/views/widgets/reveal_anim.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/timeline_tile.dart';
 
 class Developer extends StatelessWidget {
@@ -49,295 +50,299 @@ class Developer extends StatelessWidget {
           SizedBox(
             height: 70,
           ),
-          Container(
-            padding: EdgeInsets.all(30),
-            decoration: BoxDecoration(
-                color: Color(0xffECECE9),
-                borderRadius: BorderRadius.only(topRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20))
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "I've had a passion for programming since I was a teenager. I was always curious about how various applications was made.",
-                  style: commonStyle,
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """I've worked on a couple of projects during university using """,
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """C++ """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "and",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Java""",
-                            style: boldStyle
-                        )
-                      ]
+          RevealAnim(
+            key: Key("developer"),
+            revealDirection: RevealDirection.TOP,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                  color: Color(0xffECECE9),
+                  borderRadius: BorderRadius.only(topRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20))
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "I've had a passion for programming since I was a teenager. I was always curious about how various applications was made.",
+                    style: commonStyle,
                   ),
-                ),
-                SizedBox(height: 30,),
-                Text(
-                  "I developed a couple of projects while working as a ERP technical consultant.",
-                  style: commonStyle,
-                ),
-                SizedBox(height: 30,),
-                Text(
-                  "I have always had the idea of improving myself as a mobile application developer.",
-                  style: commonStyle,
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """I started learning """,
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """Android Development """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "with",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Java """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: """as a first step in mobile development.""",
-                            style: commonStyle
-                        )
-                      ]
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """I've worked on a couple of projects during university using """,
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """C++ """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "and",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Java""",
+                              style: boldStyle
+                          )
+                        ]
+                    ),
                   ),
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """I developed a """,
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """restaurant food ordering application """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "and an ",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """application for environment monitoring systems for datacenters """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: """on android.""",
-                            style: commonStyle
-                        )
-                      ]
+                  SizedBox(height: 30,),
+                  Text(
+                    "I developed a couple of projects while working as a ERP technical consultant.",
+                    style: commonStyle,
                   ),
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """I continued my mobile development learning journey with""",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ IOS development """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "and started learning",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Swift""",
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: """.""",
-                            style: commonStyle
-                        )
-                      ]
+                  SizedBox(height: 30,),
+                  Text(
+                    "I have always had the idea of improving myself as a mobile application developer.",
+                    style: commonStyle,
                   ),
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """I developed an""",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ agenda application """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "and the same",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ application I developed for environment monitoring systems """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: """using""",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ swift.""",
-                            style: boldStyle
-                        ),
-                      ]
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """I started learning """,
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """Android Development """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "with",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Java """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: """as a first step in mobile development.""",
+                              style: commonStyle
+                          )
+                        ]
+                    ),
                   ),
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """At the start of 2019, I got into """,
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """Flutter(Dart), """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "which allows to write applications for IOS, Android, Web and desktop with the same code base.",
-                            style: commonStyle
-                        ),
-                      ]
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """I developed a """,
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """restaurant food ordering application """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "and an ",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """application for environment monitoring systems for datacenters """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: """on android.""",
+                              style: commonStyle
+                          )
+                        ]
+                    ),
                   ),
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """While improving myself on""",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Flutter, """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "I developed an online product library project with",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Neo4J """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "as database in",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Angular Framework """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "at work",
-                            style: commonStyle
-                        ),
-                      ]
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """I continued my mobile development learning journey with""",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ IOS development """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "and started learning",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Swift""",
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: """.""",
+                              style: commonStyle
+                          )
+                        ]
+                    ),
                   ),
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """I developed another product library and it's admin panel at work in""",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ ReactJS """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "library with",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Mobx """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "as state management.",
-                            style: commonStyle
-                        ),
-                      ]
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """I developed an""",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ agenda application """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "and the same",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ application I developed for environment monitoring systems """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: """using""",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ swift.""",
+                              style: boldStyle
+                          ),
+                        ]
+                    ),
                   ),
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """In the meantime I had the chance to try""",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Flutter Web """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "extensively and developed a couple of projects with it.",
-                            style: commonStyle
-                        ),
-                      ]
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """At the start of 2019, I got into """,
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """Flutter(Dart), """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "which allows to write applications for IOS, Android, Web and desktop with the same code base.",
+                              style: commonStyle
+                          ),
+                        ]
+                    ),
                   ),
-                ),
-                SizedBox(height: 30,),
-                RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: """Today I prefer using """,
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Google Cloud Firestore """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "as database and",
-                            style: commonStyle
-                        ),
-                        TextSpan(
-                            text: """ Algolia Search """,
-                            style: boldStyle
-                        ),
-                        TextSpan(
-                            text: "in my applications.",
-                            style: commonStyle
-                        ),
-                      ]
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """While improving myself on""",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Flutter, """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "I developed an online product library project with",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Neo4J """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "as database in",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Angular Framework """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "at work",
+                              style: commonStyle
+                          ),
+                        ]
+                    ),
                   ),
-                )
-              ],
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """I developed another product library and it's admin panel at work in""",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ ReactJS """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "library with",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Mobx """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "as state management.",
+                              style: commonStyle
+                          ),
+                        ]
+                    ),
+                  ),
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """In the meantime I had the chance to try""",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Flutter Web """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "extensively and developed a couple of projects with it.",
+                              style: commonStyle
+                          ),
+                        ]
+                    ),
+                  ),
+                  SizedBox(height: 30,),
+                  RichText(
+                    text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: """Today I prefer using """,
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Google Cloud Firestore """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "as database and",
+                              style: commonStyle
+                          ),
+                          TextSpan(
+                              text: """ Algolia Search """,
+                              style: boldStyle
+                          ),
+                          TextSpan(
+                              text: "in my applications.",
+                              style: commonStyle
+                          ),
+                        ]
+                    ),
+                  )
+                ],
+              ),
             ),
           )
 
