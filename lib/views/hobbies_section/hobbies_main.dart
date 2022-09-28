@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/hobbies_section/hobbies_gallery.dart';
@@ -58,3 +59,4 @@ class HobbiesMain extends StatelessWidget {
     );
   }
 }
+*/

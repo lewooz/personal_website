@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 
 class ResponsiveWidget extends StatelessWidget {
@@ -40,4 +41,4 @@ class ResponsiveWidget extends StatelessWidget {
       },
     );
   }
-}
+}*/

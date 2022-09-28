@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:levent_ozkan_personal_website/core/extensions/context_extensions.dart';
 import 'package:levent_ozkan_personal_website/utilities/colors.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 
 class LanguagesMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ScreenSize.recalculate(context);
+
     return Container(
       padding: EdgeInsets.symmetric(
           vertical: 50,
-          horizontal: 14.32.wb
+          horizontal: context.dynamicWidth(14.32)
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

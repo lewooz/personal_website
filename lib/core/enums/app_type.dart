@@ -1,0 +1,4 @@
+enum AppType{
+  professional,
+  personal
+}

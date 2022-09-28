@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 
 class PulseWidget extends StatefulWidget {
@@ -68,4 +69,4 @@ class _PulseState extends State<PulseWidget> with SingleTickerProviderStateMixin
           );
         });
   }
-}
+}*/

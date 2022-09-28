@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "472693426369",
+    "project_id": "lewo-website",
+    "storage_bucket": "lewo-website.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472693426369:android:2fa1fa0e98599cd47fec40",
+        "android_client_info": {
+          "package_name": "com.leventozkan.levent_ozkan_personal_website"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472693426369-308vgv66189l6dbdfvfjg6nfjhk63tau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQeXMRXFgQvsRWns2ICbXVyzqvDaN33Eo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472693426369-308vgv66189l6dbdfvfjg6nfjhk63tau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

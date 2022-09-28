@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/responsive_widget.dart';
@@ -351,3 +352,4 @@ class Developer extends StatelessWidget {
     );
   }
 }
+*/

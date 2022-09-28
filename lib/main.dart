@@ -1,37 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:levent_ozkan_personal_website/home_screen.dart';
-import 'package:levent_ozkan_personal_website/viewmodels/home_vm.dart';
-import 'package:provider/provider.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:levent_ozkan_personal_website/ui/shared/styles/theme.dart';
+import 'bootstrap.dart';
+import 'core/providers/providers.dart';
 
-import 'views/splash_screen/splash_screen.dart';
-
-void main() {
-  runApp(MyApp());
+void main() async {
+  await bootstrap(() => MyApp());
 }
 
-class MyApp extends StatelessWidget {
-
+class MyApp extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<HomeVM>(
-            create: (context)=>HomeVM()),
-      ],
-      child: GetMaterialApp(
-        title: 'Levent OZKAN',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.red,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: GoogleFonts.poppinsTextTheme()
-        ),
-        home: SplashScreen(),
-      ),
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeStyle = ref.watch(themeStyleProvider);
+    final _appRouter = ref.watch(routerProvider);
+
+    return MaterialApp.router(
+      title: 'Levent OZKAN',
+      debugShowCheckedModeBanner: false,
+      theme: themeStyle.appTheme,
+      scrollBehavior: NoOverScrollGlow(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
+      routerDelegate: _appRouter.delegate(),
     );
   }
 }
-
-

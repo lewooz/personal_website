@@ -6,7 +6,6 @@ import 'package:supercharged/supercharged.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:math' as math;
 
-import 'package:websafe_svg/websafe_svg.dart';
 
 class SingleCourse extends StatelessWidget {
   String courseYear, courseTitle, courseLink, techLogo;
@@ -87,7 +86,7 @@ class SingleCourse extends StatelessWidget {
                 child: Transform.rotate(angle: logoAngle,
                   child: Opacity(
                       opacity: 0.4,
-                      child: WebsafeSvg.asset(
+                      child: SvgPicture.asset(
                         techLogo, width: 90,)),),
               ),
             ),

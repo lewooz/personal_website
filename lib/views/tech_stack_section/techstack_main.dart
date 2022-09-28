@@ -1,11 +1,12 @@
+/*
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:levent_ozkan_personal_website/utilities/colors.dart';
 
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/tech_stack_section/stack_logo.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/responsive_widget.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 class TechStackMain extends StatelessWidget {
 
@@ -29,7 +30,7 @@ class TechStackMain extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                WebsafeSvg.asset(
+                SvgPicture.asset(
                   "assets/svg/technology.svg",
                   width: 30,
                   height: 30,
@@ -79,3 +80,4 @@ class TechStackMain extends StatelessWidget {
     );
   }
 }
+*/

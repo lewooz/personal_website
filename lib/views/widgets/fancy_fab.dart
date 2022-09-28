@@ -1,24 +1,24 @@
+/*
 import 'dart:async';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:levent_ozkan_personal_website/ui/pages/main/viewmodel/main_viewmodel.dart';
 import 'package:levent_ozkan_personal_website/viewmodels/home_vm.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/pulse_widget.dart';
-import 'package:provider/provider.dart';
 import 'package:simple_tooltip/simple_tooltip.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../utilities/colors.dart';
-import '../../utilities/colors.dart';
 
-class FancyFab extends StatefulWidget {
+class FancyFab extends ConsumerStatefulWidget {
   @override
-  _FancyFabState createState() => _FancyFabState();
+  ConsumerState createState() => _FancyFabState();
 }
 
-class _FancyFabState extends State<FancyFab>
+class _FancyFabState extends ConsumerState<FancyFab>
     with SingleTickerProviderStateMixin {
   bool isOpen = false;
   AnimationController animateController;
@@ -171,7 +171,7 @@ class _FancyFabState extends State<FancyFab>
   }
 }
 
-class MiniFabCircle extends StatefulWidget {
+class MiniFabCircle extends ConsumerStatefulWidget {
   bool isOpen;
   double openTopPosition, openLeftPosition;
   IconData iconData;
@@ -189,10 +189,10 @@ class MiniFabCircle extends StatefulWidget {
       this.isIcon = true});
 
   @override
-  _MiniFabCircleState createState() => _MiniFabCircleState();
+  ConsumerState createState() => _MiniFabCircleState();
 }
 
-class _MiniFabCircleState extends State<MiniFabCircle> {
+class _MiniFabCircleState extends ConsumerState<MiniFabCircle> {
   bool showTooltip = false;
 
   @override
@@ -241,7 +241,7 @@ class _MiniFabCircleState extends State<MiniFabCircle> {
                     color: Colors.white,
                     size: 17,
                   ) :
-                  WebsafeSvg.asset(
+                  SvgPicture.asset(
                     "assets/svg/technology.svg",
                     width: 17,
                     height: 17,
@@ -269,6 +269,7 @@ class _MiniFabCircleState extends State<MiniFabCircle> {
   }
 
   void onClick() {
-    context.read<HomeVM>().scrollToPosition(widget.scrollIndex);
+    ref.read(mainVMProvider).scrollToPosition(widget.scrollIndex);
   }
 }
+*/

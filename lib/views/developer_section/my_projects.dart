@@ -1,12 +1,10 @@
-import 'package:animate_do/animate_do.dart';
+/*
 import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/utilities/colors.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
-import 'package:levent_ozkan_personal_website/viewmodels/home_vm.dart';
-import 'package:levent_ozkan_personal_website/views/developer_section/portfolio_subsection.dart';
+import 'package:levent_ozkan_personal_website/views/education_section/portfolio_subsection.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/reveal_anim.dart';
-import 'package:provider/provider.dart';
-import 'package:visibility_detector/visibility_detector.dart';
+
 
 class MyProjects extends StatelessWidget {
   AnimationController controller;
@@ -168,3 +166,4 @@ Github: https://github.com/locallyoncloud/localy-flutter
     );
   }
 }
+*/

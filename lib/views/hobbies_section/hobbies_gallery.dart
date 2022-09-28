@@ -1,3 +1,4 @@
+/*
 import 'dart:math';
 import 'dart:ui';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -159,3 +160,4 @@ class HobbieItem extends StatelessWidget {
     );
   }
 }
+*/

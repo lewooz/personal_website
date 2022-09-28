@@ -23,17 +23,23 @@ class RevealAnim extends StatefulWidget {
   final Key key;
   final RevealDirection revealDirection;
   final AnimationType animationType;
-  final Duration delay;
+  final Duration? delay;
   final dynamic from;
 
-  RevealAnim({@required this.child, @required this.key, this.revealDirection = RevealDirection.LEFT, this.animationType = AnimationType.TRANSLATE, this.delay, this.from=200});
+  RevealAnim(
+      {required this.child,
+      required this.key,
+      this.revealDirection = RevealDirection.LEFT,
+      this.animationType = AnimationType.TRANSLATE,
+      this.delay,
+      this.from = 200});
 
   @override
   _RevealAnimState createState() => _RevealAnimState();
 }
 
 class _RevealAnimState extends State<RevealAnim> {
-  CustomAnimationControl control = CustomAnimationControl.PLAY_REVERSE;
+  CustomAnimationControl control = CustomAnimationControl.playReverse;
 
 
   Offset getStartingOffset(){
@@ -68,7 +74,7 @@ class _RevealAnimState extends State<RevealAnim> {
         control: control,
         curve: Curves.ease,
         tween:  getTween(),
-        duration: control == CustomAnimationControl.PLAY ? 1.seconds : 1.milliseconds,
+        duration: control == CustomAnimationControl.play ? 1.seconds : 1.milliseconds,
         builder: (context, child, value) {
           return renderAnim(value);
         });
@@ -98,18 +104,18 @@ class _RevealAnimState extends State<RevealAnim> {
             onVisibilityChanged: (visibilityInfo) {
               if (visibilityInfo.visibleFraction > 0.1) {
                 Timer(widget.delay ?? 0.seconds, ()=>setState(() {
-                  control = CustomAnimationControl.PLAY;
+                  control = CustomAnimationControl.play;
                 }));
               }
               if (visibilityInfo.visibleFraction == 0) {
                 setState(() {
-                  control = CustomAnimationControl.PLAY_REVERSE;
+                  control = CustomAnimationControl.playReverse;
                 });
               }
             },
             child: AnimatedOpacity(
-                opacity: control == CustomAnimationControl.PLAY ? 1 : 0,
-                duration: control == CustomAnimationControl.PLAY ? 1.seconds : 1.milliseconds,
+                opacity: control == CustomAnimationControl.play ? 1 : 0,
+                duration: control == CustomAnimationControl.play ? 1.seconds : 1.milliseconds,
                 child: widget.child),
           );
   }

@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 
 bool get isPortrait => ScreenSize.orientation == Orientation.portrait;
@@ -37,4 +38,4 @@ extension DoubleToMinimumScreenBloc on num {
   double get sb => this * ScreenSize._minDimension;
   double get hb => this * ScreenSize.h;
   double get wb => this * ScreenSize.w;
-}
+}*/

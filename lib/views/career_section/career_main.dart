@@ -1,3 +1,4 @@
+/*
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
@@ -145,3 +146,4 @@ class Career extends StatelessWidget {
     );
   }
 }
+*/

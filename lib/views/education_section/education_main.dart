@@ -1,20 +1,19 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:levent_ozkan_personal_website/core/init/theme_manager/theme_manager.dart';
+import 'package:levent_ozkan_personal_website/ui/shared/styles/text_styles.dart';
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/reveal_anim.dart';
 
-
-class Education extends StatefulWidget {
+class Education extends ConsumerWidget {
 
   @override
-  _EducationState createState() => _EducationState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final _theme = ref.watch(themeProvider);
 
-class _EducationState extends State<Education> {
-  @override
-  Widget build(BuildContext context) {
-    ScreenSize.recalculate(context);
+
     return Container(
       color: Color(0xff0031B4),
       padding: EdgeInsets.symmetric(
@@ -35,11 +34,7 @@ class _EducationState extends State<Education> {
               SizedBox(width: 10,),
               Text(
                 "Education",
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700
-                ),
+                style: AppTextStyles.h1,
               )
             ],
           ),
@@ -59,11 +54,7 @@ class _EducationState extends State<Education> {
                       leading: Image.asset("assets/png/isik_logo.png", width: 50,),
                       title: Text(
                     "F.M.V. Işık Üniversitesi - Faculty of Engineering - Computer Engineering",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700
-                        ),
+                        style: AppTextStyles.body1,
                   ),
                     subtitle: Text(
                       "2006 - 2011",

@@ -1,8 +1,9 @@
+/*
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:levent_ozkan_personal_website/utilities/screen_sizes.dart';
 import 'package:levent_ozkan_personal_website/views/header_section/profile_pic.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../widgets/responsive_widget.dart';
 
@@ -42,12 +43,12 @@ class Header extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Expanded(
-                          child: WebsafeSvg.asset(
+                          child: SvgPicture.asset(
                               "assets/svg/flutter_logo.svg",),
                         ),
                         SizedBox(width: 20,),
                         Expanded(
-                          child: WebsafeSvg.asset(
+                          child: SvgPicture.asset(
                             "assets/svg/nextjs_logo.svg",),
                         )
                       ],
@@ -81,7 +82,8 @@ class Header extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-             /* RichText(
+             */
+/* RichText(
                 textAlign: TextAlign.center,
                 text: TextSpan(
                     text: "Levent Özkan\n",
@@ -101,12 +103,13 @@ class Header extends StatelessWidget {
                       )
                     ]
                 ),
-              )*/
+              )*//*
+
 
               Expanded(
                   flex: 1,
                   child: Center(
-                    child: WebsafeSvg.asset(
+                    child: SvgPicture.asset(
                         "assets/svg/flutter_logo.svg", width: 486),
                   )),
               Expanded(
@@ -143,9 +146,9 @@ class Header extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      WebsafeSvg.asset("assets/svg/react_logo.svg", width: 185.51,),
+                      SvgPicture.asset("assets/svg/react_logo.svg", width: 185.51,),
                       SizedBox(height: 5,),
-                      WebsafeSvg.asset("assets/svg/nextjs_logo.svg", width: 334,)
+                      SvgPicture.asset("assets/svg/nextjs_logo.svg", width: 334,)
                     ],
                   ))
             ],
@@ -160,3 +163,4 @@ class Header extends StatelessWidget {
     );
   }
 }
+*/

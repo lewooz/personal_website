@@ -1,3 +1,4 @@
+/*
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:levent_ozkan_personal_website/utilities/colors.dart';
@@ -46,3 +47,4 @@ class FlippingCircle extends StatelessWidget {
     );
   }
 }
+*/

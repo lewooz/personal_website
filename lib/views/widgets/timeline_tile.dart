@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
+/*
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import 'package:levent_ozkan_personal_website/ui/shared/styles/text_styles.dart';
 import 'package:levent_ozkan_personal_website/views/widgets/responsive_widget.dart';
 
 class ExtraLine {
@@ -135,9 +135,8 @@ class _MyTimelineTileState extends State<ExpandableTile>
                       child: Text(
                         widget.date,
                         style:
-                        Theme.of(context).textTheme.bodyText1.copyWith(
+                       AppTextStyles.body1.copyWith(
                           fontStyle: FontStyle.italic,
-                          color: Colors.white
                         ),
                         textAlign: TextAlign.end,
                       ),
@@ -293,10 +292,10 @@ class _MyTimelineTileState extends State<ExpandableTile>
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: Text(
             e.text,
-            style: Theme.of(context).textTheme.bodyText1.copyWith(color: Colors.white),
+            style: AppTextStyles.body1,
           ),
         ),
       ),
     ];
   }
-}
+}*/
